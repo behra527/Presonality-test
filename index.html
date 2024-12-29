@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="background-animation"></div>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-container" id="welcome-container">
+        <h1>Welcome to the Personality Test</h1>
+        <p>Discover insights about your personality traits and mental well-being.</p>
+        <button class="animated-btn" onclick="startQuiz()">Start Test</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz-container hidden" id="quiz-container">
+        <h1>Personality Quiz</h1>
+        <p id="motivational-quote">"Self-awareness is the key to growth."</p>
+        <p class="progress" id="progress">Question 1 of 25</p>
+        <div id="question-container">
+            <h2 id="question"></h2>
+        </div>
+        <div id="options">
+            <button class="animated-btn option-btn" onclick="selectAnswer(5)">Strongly Agree</button>
+            <button class="animated-btn option-btn" onclick="selectAnswer(4)">Agree</button>
+            <button class="animated-btn option-btn" onclick="selectAnswer(3)">Neutral</button>
+            <button class="animated-btn option-btn" onclick="selectAnswer(2)">Disagree</button>
+            <button class="animated-btn option-btn" onclick="selectAnswer(1)">Strongly Disagree</button>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="result-container hidden" id="result-container">
+        <h1>Your Results</h1>
+        <canvas id="resultChart"></canvas>
+        <p id="result-text"></p>
+        <button class="animated-btn restart-btn" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
